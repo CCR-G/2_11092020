@@ -1,201 +1,55 @@
 /* BASE */
 
-a#skiptocontent {
-  padding: 6px;
-  position: absolute;
-  top: -40px;
-  left: 0px;
-  color: white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  border-bottom-right-radius: 8px;
-  background: #bf1722;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 100;
+@import url("styles/base.css");
+@import url("styles/header.css");
+@import url("styles/form.css");
+@import url("styles/results.css");
+@import url("styles/card.css");
+@import url("styles/footer.css");
+
+h1,
+h2 {
+  font-weight: bold;
 }
 
-main {
-  margin: 50px auto;
-  max-width: 1340px;
+/* Titres */
+
+h1 {
+  margin-bottom: 13px;
 }
 
-ul {
-  list-style: none;
+h1 + p {
+  margin-bottom: 21px;
 }
 
-/* HEADER */
+h2 {
+  margin: 0 0 28px 0;
+}
 
-header {
-  margin: 50px auto;
-  max-width: 1340px;
+/* Ligne info */
+
+.info {
+  margin: 42px 0;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
-header nav ul {
+.info span {
   display: flex;
-  flex-direction: row;
-}
-
-header #logo {
-  flex-grow: 1;
-}
-
-header nav li {
-  margin: 0 31px;
-}
-
-/* SECTION DE FILTRE */
-
-form div {
-  margin: 15px 0;
-}
-
-#filters {
-  display: flex;
-  flex-direction: row;
-}
-
-#filters span:first-child {
-  border: none;
-}
-
-#filters span {
-  border: 1px #deebff solid;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #f2f2f2;
   border-radius: 30px;
-  padding: 16px;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+  margin-right: 11px;
 }
 
-#filters input[type="checkbox"] {
-  opacity: 0;
-}
+/* Hébergements */
 
-#filters li {
-  list-style: none;
-}
-#filters ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-#filters input[type="checkbox"] {
-  /*position: absolute;
-  left: -9999px;*/
-}
-
-/*Adding focus styles on the outer-box of the fake checkbox*/
-#filters input[type="checkbox"]:focus + label::before {
-  outline: rgb(59, 153, 252) auto 5px;
-}
-
-#filters input[type="checkbox"]:checked {
-  background-color: red;
-}
-
-/* RESULTATS DE RECHERCHE */
-
-article {
-  border-radius: 30px;
-  -moz-box-shadow: 0px 0px 20px 7px #dfdfdf;
-  -webkit-box-shadow: 0px 0px 20px 7px #dfdfdf;
-  -o-box-shadow: 0px 0px 20px 7px #dfdfdf;
-  box-shadow: 0px 0px 20px 7px #dfdfdf;
-  border: solid white 4px;
-  overflow: hidden;
-  background-color: white;
-  margin: 16px 2px;
-}
-
-#hebergements {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#hebergements section {
-  background-color: #f2f2f2;
-  border-radius: 30px;
-  padding: 45px 40px;
-}
-
-#activites div {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
-}
-
-#activites div article {
-  max-width: 24%;
-}
-
-/* Liste */
-
-#hebergements-liste {
-  margin-right: 40px;
-}
-
-#hebergements-liste > div {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-#hebergements-liste article {
-  max-width: 240px;
-  height: 200px;
-  width: 250px;
-}
-
-#hebergements-liste article img {
-  max-height: 118px;
-}
-
-/* Populaires */
-
-#hebergements-populaires > div {
-  display: flex;
-  flex-direction: column;
-}
-
-#hebergements-populaires article {
-  max-height: 145px;
-}
-
-#hebergements-populaires article a {
-  display: flex;
-}
-
-#hebergements-populaires article img {
-  max-width: 130px;
-}
-
-/* FOOTER */
-
-footer {
-  background-color: #f2f2f2;
-  padding: 50px;
-}
-
-footer nav {
-  max-width: 1340px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-footer nav section {
-  width: 30%;
-}
-
-footer li {
-  list-style: none;
-}
-footer ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
+.show-more {
+  margin-top: auto;
+  font-weight: bold;
 }

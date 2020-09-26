@@ -1,0 +1,131 @@
+/* SECTION DE FILTRE */
+
+form {
+  font-weight: bold;
+}
+
+/* Search input */
+
+#search-input {
+  margin: 15px 0 31px;
+  box-shadow: inset 0 0 0 1px #f2f2f2;
+  border-radius: 17px;
+  overflow: hidden;
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#search-input > span {
+  min-width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+#search-input > span i {
+  color: black;
+}
+
+#search-input input,
+#search-input button {
+  border: none;
+  padding: 17px;
+  color: black;
+  font-weight: bold;
+}
+
+#search-input input[type="search"] {
+  background-color: #ffffff00;
+  min-width: 160px;
+}
+
+#search-input button[type="submit"] {
+  background-color: #0065fc;
+  color: white;
+  cursor: pointer;
+  min-width: 50px;
+}
+
+#search-input button[type="submit"] .submit-icon {
+  display: none;
+}
+
+#search-input button[type="submit"] span i {
+  color: white;
+}
+
+/* Filtres */
+
+#filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#filters > span {
+  box-shadow: none;
+  margin: 20px 24px 20px 0px;
+}
+
+#filters #options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#filters .option {
+  margin: 5px 24px 5px 0;
+}
+
+#filters #options > span {
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 2px #f2f2f2;
+  border-radius: 30px;
+}
+
+#filters .option span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  padding: 15px;
+  background-color: #deebff;
+  border-radius: 50px;
+}
+
+#filters .option label {
+  padding: 0 20px 0 15px;
+}
+
+#filters input[type="checkbox"] {
+  opacity: 0;
+}
+
+#filters ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#filters li {
+  list-style: none;
+}
+
+#filters input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+#filters input[type="checkbox"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+#filters input[type="checkbox"]:checked {
+  background-color: red;
+}
