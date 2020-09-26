@@ -1,4 +1,4 @@
-/* SECTION DE FILTRE */
+/* FORMULAIRE DE RECHERCHE */
 
 form {
   font-weight: bold;
@@ -6,7 +6,7 @@ form {
 
 /* Search input */
 
-#search-input {
+.search-input {
   margin: 15px 0 31px;
   box-shadow: inset 0 0 0 1px #f2f2f2;
   border-radius: 17px;
@@ -16,7 +16,7 @@ form {
   justify-content: space-between;
 }
 
-#search-input > span {
+.search-input .search-input__map-icon {
   min-width: 52px;
   display: flex;
   justify-content: center;
@@ -24,86 +24,83 @@ form {
   background-color: #f2f2f2;
 }
 
-#search-input > span i {
+.search-input .search-input__map-icon i {
   color: black;
 }
 
-#search-input input,
-#search-input button {
+.search-input input,
+.search-input button {
   border: none;
   padding: 17px;
   color: black;
   font-weight: bold;
 }
 
-#search-input input[type="search"] {
+.search-input input {
   background-color: #ffffff00;
   min-width: 160px;
 }
 
-#search-input button[type="submit"] {
+.search-input button[type="submit"] {
   background-color: #0065fc;
   color: white;
   cursor: pointer;
   min-width: 50px;
 }
 
-#search-input button[type="submit"] .submit-icon {
+.search-input button[type="submit"] .search-input__submit-icon {
   display: none;
-}
-
-#search-input button[type="submit"] span i {
-  color: white;
 }
 
 /* RESPONSIVE */
 
 @media screen and (max-width: 460px) {
-  #search-input {
+  .search-input {
     width: unset;
   }
 
-  #search-input button[type="submit"] .submit-icon {
+  .search-input button[type="submit"] .search-input__submit-text {
+    display: none;
+  }
+
+  .search-input button[type="submit"] .search-input__submit-icon {
     display: inherit;
   }
 
-  #search-input button[type="submit"] .submit-text {
-    display: none;
+  .search-input button[type="submit"] .search-input__submit-icon i {
+    color: white;
   }
 }
 
-/* Filtres */
+/* Filters */
 
-#filters {
+.filters {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 }
 
-#filters > span {
+.filters .filters__title {
   box-shadow: none;
   margin: 20px 24px 20px 0px;
 }
 
-#filters #options {
+.filters .filters__options {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-#filters .option {
+.filter-option {
   margin: 5px 24px 5px 0;
-}
-
-#filters #options > span {
   display: flex;
   align-items: center;
   box-shadow: inset 0 0 0 2px #f2f2f2;
   border-radius: 30px;
 }
 
-#filters .option span {
+.filter-option .filter-option__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,34 +111,20 @@ form {
   border-radius: 50px;
 }
 
-#filters .option label {
+.filter-option label {
   padding: 0 20px 0 15px;
 }
 
-#filters input[type="checkbox"] {
+.filter-option input[type="checkbox"] {
   opacity: 0;
-}
-
-#filters ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-#filters li {
-  list-style: none;
-}
-
-#filters input[type="checkbox"] {
   position: absolute;
   left: -9999px;
 }
 
 /*Adding focus styles on the outer-box of the fake checkbox*/
-#filters input[type="checkbox"]:focus + label::before {
+.filter-option input[type="checkbox"]:focus + label::before {
   outline: rgb(59, 153, 252) auto 5px;
 }
 
-#filters input[type="checkbox"]:checked {
-  background-color: red;
+.filter-option input[type="checkbox"]:checked {
 }

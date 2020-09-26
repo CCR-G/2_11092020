@@ -1,55 +1,7 @@
-/* BASE */
-
 @import url("styles/base.css");
 @import url("styles/header.css");
 @import url("styles/form.css");
 @import url("styles/results.css");
+@import url("styles/results-section.css");
 @import url("styles/card.css");
 @import url("styles/footer.css");
-
-h1,
-h2 {
-  font-weight: bold;
-}
-
-/* Titres */
-
-h1 {
-  margin-bottom: 13px;
-}
-
-h1 + p {
-  margin-bottom: 21px;
-}
-
-h2 {
-  margin: 0 0 28px 0;
-}
-
-/* Ligne info */
-
-.info {
-  margin: 42px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.info span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid 1px #f2f2f2;
-  border-radius: 30px;
-  padding: 8px;
-  width: 16px;
-  height: 16px;
-  margin-right: 11px;
-}
-
-/* Hébergements */
-
-.show-more {
-  margin-top: auto;
-  font-weight: bold;
-}

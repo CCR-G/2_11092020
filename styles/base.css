@@ -1,3 +1,5 @@
+/* Font */
+
 @font-face {
   font-family: "Raleway";
   src: url("fonts/Raleway-Regular.ttf");
@@ -9,6 +11,27 @@
   src: url("fonts/Raleway-Bold.ttf");
   font-weight: bold;
 }
+
+/* Titres */
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 13px;
+}
+
+h1 + p {
+  margin-bottom: 21px;
+}
+
+h2 {
+  margin: 0 0 28px 0;
+}
+
+/* Page */
 
 body {
   font-family: "Raleway";
@@ -22,6 +45,8 @@ main {
 main > * {
   padding: 0 20px;
 }
+
+/* Elements */
 
 ul {
   list-style: none;
