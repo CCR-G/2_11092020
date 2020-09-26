@@ -81,3 +81,11 @@
   margin: 0 15px;
   line-height: 1.5;
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 910px) {
+  #activities article {
+    height: 200px;
+  }
+}

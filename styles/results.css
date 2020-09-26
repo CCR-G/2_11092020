@@ -69,3 +69,45 @@
 #activities article.highlighted {
   grid-row: span 2;
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 910px) {
+  #results {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #results .results-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .results-section.background-grey {
+    border-radius: unset;
+    min-width: unset;
+  }
+
+  .results-section#accomodation {
+    order: 2;
+    background-color: unset;
+  }
+
+  .results-section#popular {
+    order: 1;
+  }
+
+  .results-section#activities {
+    order: 3;
+  }
+
+  #popular .articles-container {
+    grid-template-rows: repeat(3, 200px);
+  }
+
+  #activities .articles-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+  }
+}

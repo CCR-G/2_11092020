@@ -74,3 +74,54 @@ header #inscription:hover {
   color: white;
   border-radius: 15px;
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 650px) {
+  header {
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  header .logo-container img {
+    padding: 0;
+  }
+
+  header nav {
+    order: 2;
+    width: 100%;
+  }
+
+  header nav ul {
+    width: 100%;
+    padding: 0px;
+  }
+
+  header nav ul li {
+    width: 50%;
+    text-align: center;
+  }
+
+  header nav ul li a,
+  header nav ul li a:hover {
+    border: none;
+    color: inherit;
+    border-bottom: #f2f2f2 2px solid;
+    padding: 23px 0 19px;
+  }
+
+  header nav ul li a:active {
+    border-bottom: #0065fc 2px solid;
+    padding-bottom: 17px;
+    color: #0065fc;
+  }
+
+  header #inscription {
+    margin: 25px 0;
+  }
+
+  header #inscription:hover {
+    background: none;
+    color: #0065fc;
+  }
+}

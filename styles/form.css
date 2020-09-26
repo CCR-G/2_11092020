@@ -56,6 +56,22 @@ form {
   color: white;
 }
 
+/* RESPONSIVE */
+
+@media screen and (max-width: 460px) {
+  #search-input {
+    width: unset;
+  }
+
+  #search-input button[type="submit"] .submit-icon {
+    display: inherit;
+  }
+
+  #search-input button[type="submit"] .submit-text {
+    display: none;
+  }
+}
+
 /* Filtres */
 
 #filters {
