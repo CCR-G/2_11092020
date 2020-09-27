@@ -9,7 +9,6 @@
   left: 5px;
   color: #0065fc;
   border: 1px solid #0065fc;
-  -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: -999;
   opacity: 0;

@@ -45,7 +45,7 @@
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1090px) {
   .results {
     display: flex;
     flex-direction: column;
