@@ -62,7 +62,8 @@ header nav li a:visited {
   color: black;
 }
 
-header nav li a:hover {
+header nav li a:hover,
+header nav li a:focus {
   border-top: 2px solid blue;
   color: #0065fc;
 }
@@ -81,7 +82,8 @@ header .sign-up-button {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-header .sign-up-button:hover {
+header .sign-up-button:hover,
+header .sign-up-button:focus {
   background-color: #0065fc;
   color: white;
 }
@@ -118,7 +120,8 @@ header .sign-up-button:hover {
   }
 
   header nav ul li a,
-  header nav ul li a:hover {
+  header nav ul li a:hover,
+  header nav ul li a:focus {
     border: none;
     color: inherit;
     border-bottom: #f2f2f2 2px solid;
@@ -137,7 +140,8 @@ header .sign-up-button:hover {
     margin: 25px 0;
   }
 
-  header #sign-up-button:hover {
+  header #sign-up-button:hover,
+  header #sign-up-button:focus {
     background: none;
     color: #0065fc;
   }

@@ -21,7 +21,8 @@
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-.results section.results__popular h2 i:hover {
+.results section.results__popular h2 i:hover,
+.results section.results__popular h2:focus-within i {
   opacity: 0.5;
 }
 
@@ -30,7 +31,8 @@
   font-weight: bold;
 }
 
-.results section .results-section__show-more:hover {
+.results section .results-section__show-more:hover,
+.results section .results-section__show-more:focus {
   text-decoration: underline;
 }
 
