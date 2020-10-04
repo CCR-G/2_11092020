@@ -128,7 +128,10 @@ header .sign-up-button:focus {
     padding: 23px 0 19px;
   }
 
-  header nav ul li a:active {
+  header nav ul li a:active,
+  header nav ul li a:focus {
+    /*When the current page is the active menu element.
+    Not working at the moment, since it is a prototype.*/
     border-bottom: #0065fc 2px solid;
     padding-bottom: 17px;
     color: #0065fc;
@@ -140,8 +143,8 @@ header .sign-up-button:focus {
     margin: 25px 0;
   }
 
-  header #sign-up-button:hover,
-  header #sign-up-button:focus {
+  header .sign-up-button:hover,
+  header .sign-up-button:focus {
     background: none;
     color: #0065fc;
   }

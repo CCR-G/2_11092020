@@ -7,13 +7,12 @@
   </title>
 
   <base href="index.html" />
-
   <link rel="stylesheet" type="text/css" href="styles/styles.css" />
   <script src="https://kit.fontawesome.com/949298e37f.js" crossorigin="anonymous"></script>
 
+  <meta charset="UTF-8" />
   <meta name="title" content="Reservia" />
   <meta name="description" content="Trouvez votre hébergement pour des vacances de rêves" />
-  <meta charset="UTF-8" />
   <meta name="keywords" content="Reservia, hébergement, vacances, activités" />
   <meta name="author" content="Camille Croquet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,13 +30,15 @@
           <a href="#hebergements" title="Hébergements liés à votre recherche">Hébergements</a>
         </li>
         <li>
-          <a href="#activites" title="Activités liées à votre recherche">Activités</a>
+          <a href="#activities" title="Activités liées à votre recherche">Activités</a>
         </li>
       </ul>
     </nav>
 
     <!-- If this brings the user to a new page, we should use a <a> link, if it brings up a popup, we should use a button.
-        If this becomes a when to log in, we should definitely use a button, as it might change the way things look and the results we get.-->
+      If this is also used to log in, we should definitely use a button,
+      as login in will change the way things look and the results we get.
+      https://a11y-101.com/design/button-vs-link-->
     <button title="Devenez membre pour réserver et personnaliser vos recherches" class="sign-up-button">
       S'inscrire
     </button>
@@ -49,7 +50,8 @@
     <p>En plein centre ville ou en pleine nature</p>
     <form method="POST">
 
-      <!--Removed fieldset : in Chrome and IE flexbox is not supported for this element-->
+      <!--Removed fieldset : Chrome and IE do not support this element if used with flexbox.
+        https://github.com/philipwalton/flexbugs#flexbug-9-->
       <div class="search-input">
         <span class="search-input__map-icon">
           <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
@@ -66,6 +68,7 @@
         </button>
       </div>
 
+      <!--Since we have a label, we hide the icon with ARIA for improved accessibility.-->
       <div class="filters">
         <span class="filters__title">Filtres</span>
         <div class="filters__options">
@@ -110,12 +113,19 @@
         <h2>Hébergements à Marseille</h2>
         <div class="articles-container">
           <article>
-            <!--http://fyvr.net/a11y/block-level-links.html-->
+            <!--We made sure that the card was clickable from anywhere.
+              We used this ressource to make sure it was done without loosing accessibility:
+              http://fyvr.net/a11y/block-level-links.html-->
             <a href="#" title="Naviguer vers la page 'Auberge de La Cannebière'">
+              <!--Images are hidden to screen readers as they are decorative.
+              Thus we leave the alt attribute empty.
+              https://www.w3.org/WAI/tutorials/images/decorative/-->
               <img role="img" aria-hidden="true" src="images/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
               <div class="card-text" role="text">
                 <h3>Auberge La Cannebière</h3>
                 <p>Nuit à partir de <strong>25€</strong></p>
+                <!--We tell the browser that this is an image, and label it.
+                  All icons are hidden with ARIA, so that they are not being read by screen readers-->
                 <span role="img" aria-label="Hébergement 3 étoiles">
                   <i aria-hidden="true" class="fas fa-star active"></i>
                   <i aria-hidden="true" class="fas fa-star active"></i>
@@ -141,7 +151,8 @@
                   <i aria-hidden="true" class="fas fa-star active"></i>
                 </span>
               </div>
-            </a></article>
+            </a>
+          </article>
           <article>
             <a href="#" title="Naviguer vers la page 'Hôtel Les mouettes'">
               <img role="img" aria-hidden="true" src="images/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
@@ -156,7 +167,8 @@
                   <i aria-hidden="true" class="fas fa-star inactive"></i>
                 </span>
               </div>
-            </a></article>
+            </a>
+          </article>
           <article>
             <a href="#" title="Naviguer vers la page 'Hôtel de la mer'">
               <img role="img" aria-hidden="true" src="images/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
@@ -171,7 +183,8 @@
                   <i aria-hidden="true" class="fas fa-star inactive"></i>
                 </span>
               </div>
-            </a></article>
+            </a>
+          </article>
           <article>
             <a href="#" title="Naviguer vers la page 'Auberge Le Panier'">
               <img role="img" aria-hidden="true" src="images/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
@@ -186,7 +199,8 @@
                   <i aria-hidden="true" class="fas fa-star inactive"></i>
                 </span>
               </div>
-            </a></article>
+            </a>
+          </article>
           <article>
             <a href="#" title="Naviguer vers la page 'Hôtel chez Amina'">
               <img role="img" aria-hidden="true" src="images/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
@@ -202,7 +216,8 @@
                   <i aria-hidden="true" class="fas fa-star active"></i>
                 </span>
               </div>
-            </a></article>
+            </a>
+          </article>
         </div>
         <a href="#" title="Afficher tout les résultats d'hébergement de votre recherche"
           class="results-section__show-more">
@@ -211,6 +226,7 @@
 
       <section class="results__popular results-section results-section--background-plain">
         <h2>Les plus populaires
+          <!--Visually impaired people will have their screen readers ignore the icon and read the visually hidden label.-->
           <a href="#">
             <i role="img" class="fas fa-chart-line" aria-hidden="true"></i>
             <span class="visually-hidden">Statistiques des hôtels les plus populaires</span>
@@ -270,7 +286,7 @@
         </div>
       </section>
 
-      <section class="results__activities results-section">
+      <section id="activities" class="results__activities results-section">
         <h2>Activités à Marseille</h2>
         <div class="articles-container">
           <article class="article--highlighted">
@@ -285,23 +301,27 @@
               <h3>Fort de Pomègues</h3>
             </a>
           </article>
-          <article class="article--highlighted"><a href="#" title="Naviguer vers la page 'Îles du Frioule'">
+          <article class="article--highlighted">
+            <a href="#" title="Naviguer vers la page 'Îles du Frioule'">
               <img role="img" aria-hidden="true" src="images/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="">
               <h3>Îles du Frioul</h3>
             </a>
           </article>
-          <article><a href="#" title="Naviguer vers la page 'Parc National des Calanques'">
+          <article>
+            <a href="#" title="Naviguer vers la page 'Parc National des Calanques'">
               <img role="img" aria-hidden="true" src="images/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
                 alt="">
               <h3>Parc National des Calanques</h3>
             </a>
           </article>
-          <article><a href="#" title="Naviguer vers la page 'Notre-Dame-de-la-Garde'">
+          <article>
+            <a href="#" title="Naviguer vers la page 'Notre-Dame-de-la-Garde'">
               <img role="img" aria-hidden="true" src="images/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="">
               <h3>Notre-Dame-de-la-Garde</h3>
             </a>
           </article>
-          <article><a href="#" title="Naviguer vers la page 'Parc Longchamp'">
+          <article>
+            <a href="#" title="Naviguer vers la page 'Parc Longchamp'">
               <img role="img" aria-hidden="true" src="images/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="">
               <h3>Parc Longchamp</h3>
             </a>
