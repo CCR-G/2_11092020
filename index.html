@@ -56,10 +56,8 @@
         <span class="search-input__map-icon">
           <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
         </span>
-
         <input type="search" name="ville" aria-label="Entrez le nom d'une ville" autocomplete="on"
           placeholder="Marseille, France">
-
         <button type="submit">
           <span class="search-input__submit-text">Rechercher</span>
           <span class="search-input__submit-icon" aria-hidden="true">
@@ -72,34 +70,34 @@
       <div class="filters">
         <span class="filters__title">Filtres</span>
         <div class="filters__options">
-          <span class="filter-option">
+          <input name="type-hebergement" id="economique" type="checkbox" value="economique" />
+          <label for="economique" class="filter-option">
             <span aria-hidden="true" class="filter-option__icon">
               <i class="fas fa-money-bill-wave"></i>
             </span>
-            <input name="type-hebergement" id="economique" type="checkbox" value="economique" />
-            <label for="economique">Économique</label>
-          </span>
-          <span class="filter-option">
+            <span class="filter-option__label">Économique</span>
+          </label>
+          <input name="type-hebergement" id="familial" type="checkbox" value="familial" />
+          <label for="familial" class="filter-option">
             <span aria-hidden="true" class="filter-option__icon">
               <i class="fas fa-child"></i>
             </span>
-            <input name="type-hebergement" id="familial" type="checkbox" value="familial" />
-            <label for="familial">Familial</label>
-          </span>
-          <span class="filter-option">
+            <span class="filter-option__label">Familial</span>
+          </label>
+          <input name="type-hebergement" id="romantique" type="checkbox" value="romantique" />
+          <label for="romantique" class="filter-option">
             <span aria-hidden="true" class="filter-option__icon">
               <i class="fas fa-heart"></i>
             </span>
-            <input name="type-hebergement" id="romantique" type="checkbox" value="romantique" />
-            <label for="romantique">Romantique</label>
-          </span>
-          <span class="filter-option">
+            <span class="filter-option__label">Romantique</span>
+          </label>
+          <input name="type-hebergement" id="animaux-autorises" type="checkbox" value="animaux-autorises" />
+          <label for="animaux-autorises" class="filter-option">
             <span aria-hidden="true" class="filter-option__icon">
               <i class="fas fa-dog"></i>
             </span>
-            <input name="type-hebergement" id="animaux-autorises" type="checkbox" value="animaux-autorises" />
-            <label for="animaux-autorises">Animaux autorisés</label>
-          </span>
+            <span class="filter-option__label">Animaux autorisés</span>
+          </label>
         </div>
       </div>
     </form>
@@ -138,7 +136,6 @@
           </article>
           <article>
             <a href="#" title="Naviguer vers la page 'Hôtel du port'">
-
               <img role="img" aria-hidden="true" src="images/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="">
               <div class="card-text" role="text">
                 <h3>Hôtel du port</h3>
