@@ -35,7 +35,7 @@
 
 .articles-container article:hover h3,
 .articles-container article:focus-within h3 {
-  text-decoration: underline 2px #0065fc;
+  text-decoration: underline #0065fc;
 }
 
 .articles-container article .card-text {
