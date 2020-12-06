@@ -14,7 +14,7 @@ OpenClassrooms - Web developper training
 *I also made the page accessible and usable using a keyboard or screen reader.*
 
 ## Link to the GitHub page
-https://ccr-g.github.io/2_11092020/
+https://ccr-g.github.io/OC_2-Turn_mock-ups_into_a_web_page/
 
 ## Comments and feedback
 This exercice is part of my training to become a web developper.<br>
